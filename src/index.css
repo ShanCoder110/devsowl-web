@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@theme {
+  /* === Brand Colors (Main Identity / CTA / Accent) === */
+  --color-brand-primary: #22d3ee; /* cyan-400 */
+  --color-brand-secondary: #06b6d4; /* cyan-500 */
+  --color-brand-accent: #0891b2; /* cyan-600 */
+
+  /* === Gradient Colors (used in backgrounds/cards/stripes) === */
+  --color-gradient-start: #60a5fa; /* blue-400 */
+  --color-gradient-end: #c084fc; /* purple-400 */
+
+  /* === Font/Text Colors === */
+  --color-font-foreground: #ffffff; /* text-font-foreground */
+  --color-font-muted: oklch(0.65 0.02 270); /* text-font-muted */
+  --color-font-inverse: #000000; /* text-font-inverse */
+  --color-font-success: oklch(0.7 0.18 145); /* text-font-success */
+  --color-font-danger: oklch(0.7 0.2 30); /* text-font-danger */
+  --color-font-accent: var(--color-brand-primary); /* reuse primary as accent */
+
+  /* === Surface / Backgrounds === */
+  --color-surface-bg: #18191a;
+  --color-surface-secondary: #23272f;
+  --color-surface-panel: #202124;
+  --color-surface-glow: #1f1f21;
+
+  /* === States / Feedback === */
+  --color-state-success: oklch(0.7 0.18 145);
+  --color-state-danger: oklch(0.7 0.2 30);
+  --color-state-warning: oklch(0.9 0.2 75);
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* global.css or your Tailwind CSS input file */
+.mask-linear-gradient {
+  -webkit-mask-image: linear-gradient(to bottom, red, transparent 88%);
+  mask-image: linear-gradient(to bottom, red, transparent 88%);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: center top;
+  mask-mode: alpha;
+  mask-composite: exclude;
+  mask-origin: content-box;
+  mask-clip: content-box;
+  mask-border-mode: match-source;
+}
+
+.mask-radial-gradient {
+  -webkit-mask-image: radial-gradient(red, transparent 80%);
+  mask-image: radial-gradient(red, transparent 80%);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
